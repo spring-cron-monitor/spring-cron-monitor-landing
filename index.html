@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cron Monitor for Spring Boot</title>
+    <meta name="description"
+          content="Plug‑&‑play monitoring for Spring Boot cron, Quartz & JobRunr jobs. Zero code, smart alerts.">
+    <!--  Bootstrap 5  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--  OPTIONAL: кастомный основной цвет  -->
+    <style>
+        :root {
+            --bs-primary: #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+<!-- HERO ---------------------------------------------------------------->
+<section class="py-5 text-center bg-white">
+    <div class="container">
+        <h1 class="display-5 fw-semibold">Spring&nbsp;Boot <span class="text-primary">Cron Monitor</span></h1>
+        <p class="lead mb-4">
+            Add one dependency&nbsp;— we watch every <code>@Scheduled</code>, Quartz & JobRunr task.<br>
+            Missed, hung or overlapping job? You get an alert in Slack.
+        </p>
+        <a href="#signup" class="btn btn-primary btn-lg">Join Early Access</a>
+        <p class="small text-secondary mt-3">Early adopters get <b>50&nbsp;% off</b>&nbsp;— forever</p>
+    </div>
+</section>
+
+<!-- FEATURES ------------------------------------------------------------>
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Why teams switch to Cron&nbsp;Monitor?</h2>
+
+        <div class="row g-4">
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Missed runs</h5>
+                        <p class="card-text">Nightly ETL failed? We alert before clients notice.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Timeout & hangs</h5>
+                        <p class="card-text">Kill zombie jobs and save CPU with runtime thresholds.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Overlap guard</h5>
+                        <p class="card-text">Detect when two instances run the same job in parallel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Cluster‑aware</h5>
+                        <p class="card-text">Success = any pod finishes. No false reds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS + MAVEN ----------------------------------------------->
+<section class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Install • Configure • Relax</h2>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="border rounded-3 p-3 h-100">
+                    <h5>1&nbsp;—&nbsp;Install</h5>
+                    <p class="mb-0">Add our starter in&nbsp;30&nbsp;seconds.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border rounded-3 p-3 h-100">
+                    <h5>2&nbsp;—&nbsp;Configure</h5>
+                    <p class="mb-0"><code>cron.monitor.token=YOUR_TOKEN</code>, nothing else to code.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border rounded-3 p-3 h-100">
+                    <h5>3&nbsp;—&nbsp;Relax</h5>
+                    <p class="mb-0">Dashboard & alerts appear instantly.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h5>Maven snippet</h5>
+            <pre class="bg-light border rounded-3 p-3"><code>&lt;dependency&gt;
+  &lt;groupId&gt;io.cronmonitor&lt;/groupId&gt;
+  &lt;artifactId&gt;cron-monitor-spring-boot-starter&lt;/artifactId&gt;
+  &lt;version&gt;0.1.0&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING ------------------------------------------------------------->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Early Pricing</h2>
+
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="border rounded-3 p-4 h-100">
+                    <h5>Beta</h5>
+                    <p class="display-6 fw-semibold">Free</p>
+                    <p class="small">20 jobs • unlimited alerts • community Slack</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary rounded-3 p-4 h-100">
+                    <h5>Starter</h5>
+                    <p class="display-6 fw-semibold">$4.99<span class="fs-5">/mo</span></p>
+                    <p class="small">5 jobs • 14‑day history • Slack & email</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border rounded-3 p-4 h-100">
+                    <h5>Pro</h5>
+                    <p class="display-6 fw-semibold">$19.99<span class="fs-5">/mo</span></p>
+                    <p class="small">50 jobs • 90‑day history • Prometheus exporter</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-center small text-secondary mt-3">
+            No credit card during beta. Pay only when we save you time.
+        </p>
+    </div>
+</section>
+
+<!-- SIGN‑UP ------------------------------------------------------------->
+<section id="signup" class="py-5 bg-primary text-white text-center">
+    <div class="container">
+        <h2 class="mb-3">Ready to stop babysitting cron?</h2>
+        <form class="row g-2 justify-content-center"
+              action="https://formspree.io/f/mgvkwzza" method="POST">
+            <div class="col-12 col-md-auto">
+                <input type="email" name="email" class="form-control form-control-lg"
+                       placeholder="Work email" required>
+            </div>
+            <div class="col-12 col-md-auto">
+                <input type="text" name="company" class="form-control form-control-lg"
+                       placeholder="Company (optional)">
+            </div>
+            <div class="col-12 col-md-auto">
+                <button class="btn btn-light btn-lg w-100" type="submit">
+                    Join Wait‑list
+                </button>
+            </div>
+        </form>
+        <p class="small mt-3">We’ll send the invites to the first 10 teams.</p>
+    </div>
+</section>
+
+<!-- FAQ ----------------------------------------------------------------->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">FAQ</h2>
+
+        <div class="accordion" id="faq">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#a1">
+                        How is this different from Cronitor / Healthchecks?
+                    </button>
+                </h2>
+                <div id="a1" class="accordion-collapse collapse" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                        Our starter auto‑discovers jobs, is cluster‑aware and tracks overlaps & runtime—not just
+                        heartbeats.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#a2">
+                        What data leaves my servers?
+                    </button>
+                </h2>
+                <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                        Only job metadata (name, timestamps, status, optional stack trace). No business payload.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -------------------------------------------------------------->
+<footer class="py-4 text-center small text-secondary">
+    ©&nbsp;2025 Spring Boot Cron Monitor • Java‑first, privacy‑first •
+    <a href="#" class="text-secondary text-decoration-none">Terms</a> •
+    <a href="#" class="text-secondary text-decoration-none">Privacy</a>
+</footer>
+
+<!-- Bootstrap JS (аккордион FAQ) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
